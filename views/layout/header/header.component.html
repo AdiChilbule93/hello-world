@@ -1,0 +1,90 @@
+<header>
+
+    <div class="container-fluid">
+        <a mat-icon-button class="menuToggle" (click)="sidenavtoggle()"><i class="fa fa-bars"></i></a>
+
+        <a class="logo">
+            <a routerLink="/" (click)="sidenavClose()" class="logo-btn">
+                <img src="assets/vendor/img/logo.png" alt="">
+
+                <span> Self-Serve Analytics</span>
+            </a>
+        </a>
+
+        <div class="rightSide">
+            <div class="dropdownBox">
+                <mat-form-field>
+                    <mat-select [(value)]="selected">
+                        <mat-option value="Platform">P&C</mat-option>
+                        <mat-option value="Information Technology" disabled>Information Technology</mat-option>
+                        <mat-option value="HR" disabled>H&R</mat-option>
+                        <mat-option value="RFX" disabled>RFX</mat-option>
+                    </mat-select>
+
+                </mat-form-field>
+            </div>
+            <!-- <div class="searchBox control">
+            
+                  <div class='searchForm btn-material'></div>
+                  <i class="fa fa-search"></i>
+            </div> -->
+            <div class="userDropdown">
+                <div class="userMenu">
+                    <button mat-button class="btn" [matMenuTriggerFor]="menu">
+                        <span><b id="idUsername">User</b></span>
+                        <i matSuffix class="fa fa-user-circle fa-2x"></i>
+                        <!-- <img src="assets/vendor/img/user.jpg" alt=""> -->
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item routerLink="" disabled>
+                            <i class="fa fa-envelope bg-success"></i>
+                            <span>Message</span>
+                        </button>
+
+                        <button mat-menu-item routerLink="" disabled>
+                            <i class="fa fa-bell bg-warning"></i>
+                            <span>Notification</span>
+                            <!-- <span class="badge badge-danger badge-notification">16</span> -->
+                        </button>
+                        <button mat-menu-item routerLink="" disabled>
+                            <i class="fa fa-cog bg-primary"></i>
+                            <span>Settings</span>
+                        </button>
+
+                        <!-- <a href="../../../../assets/vendor/Self-Serve Analytics - Frequently Asked Questions V1.pdf" target="_blank" mat-menu-item>
+                            <i class="fa fa-question-circle bg-success"></i>
+
+                            <span>Incorporate Help</span>
+                        </a> -->
+                        
+                        <button mat-menu-item [matMenuTriggerFor]="IncorporateHelp">
+                                <i class="fa fa-question-circle bg-success"></i>
+
+                            <span>Help</span>
+                            </button>
+                         <button mat-menu-item routerLink="contact">
+                            <i class="fa fa-phone-square bg-primary"></i>
+                            <span>Contact Us</span>
+                        </button>
+                        <button mat-menu-item routerLink="login" disabled>
+                            <i class="fa fa-power-off bg-danger"></i>
+                            <span>Log Out</span>
+                        </button>
+
+
+                        <mat-menu #IncorporateHelp="matMenu">
+                                <a href="{{env.myDocumentVarUrl}}{{pdfName}}" target="_blank" mat-menu-item>
+                                    <i class="fa fa-file-pdf bg-success"></i>
+        
+                                    <span>FAQ</span>
+                                </a>
+                                <button mat-menu-item md-button (click)="openUserDialog()" >
+                                        <i class="fa fa-info bg-success"></i>Walk-through</button>
+                         </mat-menu>
+                    </mat-menu>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

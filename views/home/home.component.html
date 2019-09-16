@@ -1,0 +1,63 @@
+<form autocomplete="off">
+<mat-tab-group class="iframematdash" (selectedTabChange)="onLinkClick($event)">
+
+
+  <mat-tab label="Plan vs Actual">
+    <iframe id="idAggSpend" [src]="safeSrc_pv"  frameborder="0" webkitallowfullscreen
+      mozallowfullscreen allowfullscreen></iframe>
+
+  </mat-tab>
+
+
+  <mat-tab label="Variance Analysis">
+    <mat-tab-group (selectedTabChange)="onLinkClick($event)">
+
+      <mat-tab label="Variance Summary">
+        <iframe id="idAggSpend" [src]="safeSrc_vs" frameborder="0" webkitallowfullscreen mozallowfullscreen
+          allowfullscreen></iframe>
+      </mat-tab>
+
+      <mat-tab label="Variance Details">
+        <iframe id="idAggSpend" [src]="safeSrc_vd" frameborder="0" webkitallowfullscreen mozallowfullscreen
+          allowfullscreen></iframe>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-tab>
+
+  <mat-tab label="Pricing Trends">
+    <iframe id="idAggSpend" [src]="safeSrc_pt" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </mat-tab>
+
+  <mat-tab label="Spend Baseline">
+    <iframe id="idAggSpend" [src]="safeSrc_sb" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </mat-tab>
+
+  <mat-tab label="Vendor Relations">
+    <mat-tab-group (selectedTabChange)="onLinkClick($event)">
+
+      <mat-tab label="Vendor Baseline">
+        <iframe id="idGrpSpendPr" [src]="safeSrc_vr" frameborder="0" webkitallowfullscreen mozallowfullscreen
+          allowfullscreen></iframe>
+      </mat-tab>
+
+      <mat-tab label="Vendor Clustering">
+        <iframe id="idAggSpend" [src]="safeSrc_vc" frameborder="0" webkitallowfullscreen mozallowfullscreen
+          allowfullscreen></iframe>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-tab>
+
+  <mat-tab label="Commercial Terms">
+    <iframe id="idGrpSpendPr" [src]="safeSrc_ct" frameborder="0" webkitallowfullscreen mozallowfullscreen
+      allowfullscreen></iframe>
+  </mat-tab>
+  <mat-tab label="Stock Consumption">
+    <iframe id="idAggSpend" [src]="safeSrc_sc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </mat-tab>
+
+
+</mat-tab-group>
+
+</form>

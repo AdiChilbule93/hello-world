@@ -1,0 +1,39 @@
+<aside class="sidenav sidenavLeft">
+  <nav class="side-nav">
+    <a mat-button routerLink="" class="btn" (click)="sidenav_Toggle()"><i class="fa fa-rupee-sign"></i><span>Spend
+        Analytics</span></a>
+    <a mat-button class="btn" style="background-color:transparent ; color: gainsboro;"><i class="fa fa-diagnoses"></i><span>Inventory
+        Management</span></a>
+    <a mat-button routerLink="tco" class="btn" (click)="sidenav_Toggle()"><i class="fa fa-file-invoice-dollar"></i><span>TCO</span></a>
+    <a mat-button class="btn" style="background-color:transparent ; color: gainsboro;"><i class="fa fa-money-check-alt"></i><span>Market
+        Condition</span></a>
+    <a mat-button class="btn" style="background-color:transparent ; color: gainsboro;"><i class="fa fa-sort-amount-up"></i><span>Performance
+        Analytics</span></a>
+    <a mat-button class="btn" style="background-color:transparent ; color: gainsboro;"><i class="fa fa-tachometer-alt"></i><span>Risk
+        Analytics</span></a>
+    <a  class="btn" style="background-color:transparent ; color: gainsboro;"><i class="fa fa-dolly-flatbed"></i><span>Supplier
+        Analytics</span></a>
+
+        <a mat-button  class="btn" [matMenuTriggerFor]="menu"><img src="assets/vendor/img/reports_image_9x11.png" alt="" ><span style="padding:10px">Reports</span></a>
+       
+
+    <mat-menu #menu="matMenu" style="padding-left: 240px !important">
+      <button mat-menu-item [matMenuTriggerFor]="Reports" ><span>Weekly Commitment Summary</span></button>
+ 
+      
+      <!-- <button mat-menu-item > <span>Weekly Commitment Summary</span></button> -->
+                
+    </mat-menu>
+           
+    <mat-menu #Reports="matMenu" >
+       <button mat-menu-item md-button  routerLink="Weekly-Summary"  (click)="sidenav_Toggle()" > <span> Weekly Summary</span> </button>
+       <button mat-menu-item md-button  routerLink="Vendorwise-Summary"  (click)="sidenav_Toggle()"><span> Vendorwise Summary</span></button>
+    </mat-menu>
+
+
+
+    <a mat-button target="_blank" class="btn" style="background-color:transparent ; color: gainsboro;"><i class="fa fa-window-restore"></i><span>My Analytics</span></a>
+
+</nav>
+
+</aside>

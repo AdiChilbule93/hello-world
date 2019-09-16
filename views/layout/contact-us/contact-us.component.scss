@@ -1,0 +1,125 @@
+:host {
+  display: block;
+  padding: 32px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 3%
+}
+.header {
+  background-color: #e3e3e3;
+}
+.side {
+  background-color: #e3e3ff;
+}
+.content {
+  background-color: #e3ffe3;
+}
+.footer {
+  background-color: #ffe3e3;
+}
+
+
+
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+height: 100%;
+display: flex;
+flex: 2%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+width: 1030px;
+height: 100%;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+width: 100%
+
+}
+
+
+
+thead th {
+cursor: pointer;
+margin-right: 15px;
+margin-left: 15px;
+width: 100%
+
+
+span {
+  visibility: hidden;
+}
+
+&.active {
+  color: #000;
+
+  span {
+    visibility: visible;
+  }
+}
+}
+
+
+hr { 
+display: block;
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+margin-left: auto;
+margin-right: auto;
+// border-style: inset;
+border-width: 3px;
+padding-top: 5px
+
+} 
+
+.contactUS{
+
+width: 1300px;
+    height: 326px;
+padding-bottom: 290px;
+
+}
+
+
+
+.bar.total rect {
+fill: steelblue;
+}
+
+.bar.positive rect {
+fill: darkolivegreen;
+}
+.bar.negative rect {
+fill: crimson;
+}
+
+.bar line.connector {
+stroke: grey;
+stroke-dasharray: 3;
+}
+
+.bar text {
+fill: white;
+font: 12px sans-serif;
+text-anchor: middle;
+}
+
+.axis text {
+font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+fill: none;
+stroke: #000;
+shape-rendering: crispEdges;
+}
+#contact-us{
+  text-align: center
+}
